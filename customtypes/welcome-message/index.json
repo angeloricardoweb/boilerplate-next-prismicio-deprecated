@@ -1,0 +1,24 @@
+{
+  "id": "welcome-message",
+  "label": "Welcome Message",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "message": {
+        "type": "Text",
+        "config": {
+          "label": "Message",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}
