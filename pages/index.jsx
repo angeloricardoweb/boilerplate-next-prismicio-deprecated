@@ -1,14 +1,20 @@
 import { createClient } from "../prismicio";
+import Head from "next/head";
 
 export default function Home({ welcome }) {
   const { title, message } = welcome;
   console.log(welcome);
   return (
-    <div>
-      <h1>Prismic Boilerplate</h1>
-      <h2>{title}</h2>
-      <h2>{message}</h2>
-    </div>
+    <>
+      <Head>
+        <title>Next Prismic Boilerplate</title>
+      </Head>
+      <div>
+        <h1>Prismic Boilerplate</h1>
+        <h2>{title}</h2>
+        <h2>{message}</h2>
+      </div>
+    </>
   );
 }
 
