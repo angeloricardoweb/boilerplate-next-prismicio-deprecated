@@ -1,5 +1,6 @@
 import { createClient } from "../prismicio";
 import Head from "next/head";
+import SEO from "../components/seo";
 
 export default function Home({ welcome }) {
   const { title, message } = welcome;
@@ -9,6 +10,7 @@ export default function Home({ welcome }) {
       <Head>
         <title>Next Prismic Boilerplate</title>
       </Head>
+      <SEO />
       <div>
         <h1>Prismic Boilerplate</h1>
         <h2>{title}</h2>
