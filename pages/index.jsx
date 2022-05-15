@@ -23,11 +23,20 @@ export default function Home({ welcome }) {
 export async function getStaticProps({ previewData }) {
   const client = createClient({ previewData });
 
-  const welcomeResponse = await client.getSingle("welcome-message");
-  const welcome = welcomeResponse.data;
-  console.log(welcome);
-
-  return {
-    props: { welcome },
-  };
+  try {
+    const welcomeResponse = await client.getSingle("welcome-message");
+    const welcome = welcomeResponse.data;
+    return {
+      props: { welcome },
+    };
+  } catch (error) {
+    return {
+      props: {
+        welcome: {
+          title: "Ops!",
+          message: "Adicione seu primeiro Conteúdo",
+        },
+      },
+    };
+  }
 }
