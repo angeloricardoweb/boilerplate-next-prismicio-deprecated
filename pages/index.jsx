@@ -4,7 +4,6 @@ import SEO from "../components/seo";
 
 export default function Home({ welcome }) {
   const { title, message } = welcome;
-  console.log(welcome);
   return (
     <>
       <Head>
@@ -13,6 +12,7 @@ export default function Home({ welcome }) {
       <SEO />
       <div>
         <h1>Prismic Boilerplate</h1>
+        
         <h2>{title}</h2>
         <h2>{message}</h2>
       </div>
